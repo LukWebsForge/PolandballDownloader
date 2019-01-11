@@ -13,12 +13,12 @@ import (
 const album string = "N63szEQ"
 
 type ImageInfo struct {
-	FileName    string
-	Url         string
-	Description string
-	Creators    []string
-	Width       int
-	Height      int
+	FileName    string   `json:"file_name"`
+	Url         string   `json:"url"`
+	Description string   `json:"description"`
+	Creators    []string `json:"creators"`
+	Width       int      `json:"width"`
+	Height      int      `json:"height"`
 }
 
 func main() {
