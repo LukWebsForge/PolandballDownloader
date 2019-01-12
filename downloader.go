@@ -89,6 +89,10 @@ func extractData(image map[string]interface{}, i int, compile *regexp.Regexp) Im
 	creators := compile.FindAllString(description, -1)
 	descShort := strings.Split(description, "\n\n")[0]
 
+	if strings.Contains(descShort, "Created by") {
+		descShort = ""
+	}
+
 	if i == 0 {
 		descShort = "Cover"
 	}
